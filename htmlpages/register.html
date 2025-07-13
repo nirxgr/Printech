@@ -1,0 +1,110 @@
+<html>
+<!--Start of head section-->
+<head>
+    <title>Profile</title>
+    <!--Linking External Css-->
+    <link rel="stylesheet" href="../css/style.css">
+     <!--Internal Css-->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }       
+    </style>
+</head>
+<!--End of Head section-->
+<!--Start of Body section-->
+<body>
+    <!--Nav bar section-->
+    <nav class="navbar">
+        <!--Start of figure section-->
+        <figure>
+            <!--Usimg img tag to add image-->
+            <img src="../images/logo2.png" alt="Company Name" class="logo2">
+            <a href="../index.html" style="text-decoration: none;">
+               <img src="../images/logo.png" alt="Company Logo" class="logo" > 
+            </a>
+            <div class="three">
+            <a href="login.html">
+                <img src="../images/profile.png" alt="Profile">
+            </a>        
+            </div>
+        </figure>
+        <!--End of figure section-->
+        <table class="table1">
+            <tr>
+                <th>
+                    <!--Using hyperlink to link from one page to another-->
+                    <a href="blog.html">Blog</a>
+                </th>
+                <th>
+                    <a href="ProductPage.html">Shop</a>
+                </th>
+                <th>
+                    <a href="Research.html">Research</a>
+                </th>
+                <th>
+                    <a href="About.html">About Us</a>
+                </th>
+            </tr>
+        </table>
+    </nav>
+    <!--Nav bar ends-->
+        <div class="background">
+            <div class="wrapper">
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <!--Creating a form for registration-->
+                    <form name="messageForm" onsubmit = "validateForm()">
+                        <div class="input-box">
+                            <input type="text" name="username">
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email">
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password">
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms & conditions
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account?
+                                <a href="login.html" class="login-link"> 
+                                    Login 
+                                </a>
+                            </p>
+                        </div>
+                    </form> 
+                </div>    
+            </div>
+        </div>
+        <!--Internal Javascript-->
+        <script>
+            // Function to validate a form
+            function validateForm(){
+                // Get values from the form fields
+                var UserName = document.forms["messageForm"]["username"].value;
+                var Email=document.forms["messageForm"]["email"].value;
+                var Password = document.forms["messageForm"]["password"].value;
+                // Check if any of the fields are empty
+                if (UserName == "" || Email == "" || Password == "" ){
+                     // Alert the user to fill in all the fields
+                    alert("Please fill all the fields");
+                } 
+                else {
+                    // Alert the user that their account has been registered
+                    alert("Your account has been registered.")
+        
+                }
+            }
+        </script>
+</body>
+<!--End of Body Section-->
+</html>

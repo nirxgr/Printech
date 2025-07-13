@@ -1,0 +1,115 @@
+<html>
+<!--Start of head section-->
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<!--End of Head section-->
+<!--Start of Body section-->
+<body>
+    <!--Nav bar section-->
+    <nav class="navbar">
+        <!--Start of figure section-->
+        <figure>
+            <!--Usimg img tag to add image-->
+            <img src="../images/logo2.png" alt="Company Name" class="logo2">
+            <a href="../index.html" style="text-decoration: none;">
+               <img src="../images/logo.png" alt="Company Logo" class="logo" > 
+            </a>
+            <div class="three">
+            <a href="login.html">
+                <img src="../images/profile.png" alt="Profile">
+            </a>        
+            </div>
+        </figure>
+        <!--End of figure section-->
+        <table class="table1">
+            <tr>
+                <th>
+                    <!--Using hyperlink to link from one page to another-->
+                    <a href="blog.html">Blog</a>
+                </th>
+                <th>
+                    <a href="ProductPage.html">Shop</a>
+                </th>
+                <th>
+                    <a href="Research.html">Research</a>
+                </th>
+                <th>
+                    <a href="About.html">About Us</a>
+                </th>
+            </tr>
+        </table>
+    </nav>
+    <!--Nav bar ends-->
+        <div class="background">
+            <div class="wrapper">
+                <div class="form-box login">
+                    <!--Creating a form for login-->
+                    <h2>Login</h2>
+                    <form name="messageForm" onsubmit="loginForm()">
+                        <div class="input-box">
+                            <label>Email</label>
+                            <input type="email" name="email">
+                            
+                        </div>
+                        <div class="input-box">
+                            <label>Password</label>
+                            <input type="password" name="password">
+                            
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember Me
+                            </label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account?
+                                <a href="register.html" class="register-link"> 
+                                    Register 
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                
+                </div>
+                
+            </div>
+        </div>
+        <!--Internal Javascript-->
+        <script>
+            // Function to handle login form submission
+            function loginForm(){
+                // Get values from the form fields
+                var Email=document.forms["messageForm"]["email"].value;
+                var Password = document.forms["messageForm"]["password"].value;
+                // Check if either email or password is empty
+                if (Email == "" || Password == ""){
+                    // Alert the user to enter both email and password
+                       alert("Please enter your email and password.");
+                    } 
+                // Check if the entered email and password match the expected values
+                if (Email == "grgniraj01@gmail.com" && Password == "islington" ){
+                    // Alert the user that login was successful
+                    alert("Successfully loged in.");
+                } 
+                else {
+                    // Alert the user that the entered email or password is incorrect
+                    alert("Incorrect email or password.")
+                }
+            }
+            
+        </script>
+</body>
+<!--End of Body Section-->
+</html>
